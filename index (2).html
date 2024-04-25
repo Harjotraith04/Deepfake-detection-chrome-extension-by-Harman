@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/custom.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <script src="js/bootstrap.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <!--Tab that appears when a user is logged in-->
+  <div class="container" id="loginSuccess" style="display:none;">
+    <div class="container" id="overall">
+      <div class="container" id="card">
+        <!-- Header + toggle bar-->
+        <div class="row" id="header">
+          <div class="container" id="top-header">
+            <div class="col header-logo">
+              <a href="https://duckduckgoose.ai" target="_blank">
+                <img src="/images/nav-img/header.svg" id="header-img" title="Visit us at duckduckgoose.ai"
+                  alt="header-img" width="300" height="78" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row nav-content">
+          <!-- List of buttons in navigation-->
+          <div class="col-3 left-tab">
+            <ul class="nav flex-column nav-tabs tabs-left" id="myTab" role="tablist">
+
+              <!-- List item home-->
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active btn-block" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                  type="button" role="tab" aria-controls="home" aria-selected="true">
+                  <img src="/images/nav-img/home.svg" alt="home icon" width="30px" height="30px" title="About" />
+                </button>
+              </li>
+              <!-- List item help -->
+              <li class="nav-item" role="presentation">
+                <button class="nav-link btn-block" id="help-nav" data-bs-toggle="tab" data-bs-target="#help-tab"
+                  type="button" role="tab" aria-controls="help-tab" aria-selected="false">
+                  <img src="/images/nav-img/help.svg" alt="help-icon" width="30px" height="30px" title="Information" />
+                </button>
+              </li>
+              <!-- List item faq -->
+              <li class="nav-item" role="presentation">
+                <button class="nav-link btn-block" id="faq-tab" data-bs-toggle="tab" data-bs-target="#faq" type="button"
+                  role="tab" aria-controls="faq" aria-selected="false">
+                  <img src="/images/nav-img/faq.svg" alt="faq-icon" width="30px" height="30px" title="FAQ" />
+                </button>
+              </li>
+              <!--List item setting-->
+              <li class="nav-item" role="presentation">
+                <button class="nav-link btn-block" id="settings-tab" data-bs-toggle="tab" data-bs-target="#settings"
+                  type="button" role="tab" aria-controls="settings" aria-selected="false">
+                  <img src="/images/nav-img/setting.svg" alt="faq-icon" width="30px" height="30px" title="FAQ" />
+                </button>
+              </li>
+              <!--Toggle-->
+              <li id="toggle">
+                <div class="form-check form-switch">
+                  <input id="toggleButton" class="form-check-input" type="checkbox" id="switch" value="on"
+                    title="Turn deepfake detection on/off" />
+                </div>
+              </li>
+              <label id="toggleText">On</label>
+            </ul>
+          </div>
+          <!-- right column-->
+          <div class="col-8 right-tab">
+            <div class="tab-content" id="myTabContent">
+              <!--home content tab-->
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home">
+                <div class="card" id="home-text">
+                  <div class="card-body">
+                    <h6 class="card-title" id="about-title">About DeepfakeProof</h6>
+                    <p class="card-text" id="about-text">
+                      DuckDuckGoose has developed DeepfakeProof to give internet
+                      users a suitable tool for detecting deepfakes.
+                      DeepfakeProof is a browser plugin that warns users when
+                      they visit a web page that contains deepfakes. Beside
+                      real-time deepfake detection, DeepfakeProof provides user
+                      with insight into where deepfakes are located.
+                    </p>
+                    <br>
+                    <h6 class="card-title" id="about-title">About DuckDuckGoose</h6>
+                    <p class="card-text" id="about-text">
+                      DuckDuckGoose is a Delft-based startup focusing on
+                      deepfake detection. We envision creating a digital
+                      environment where we can still believe what we perceive.
+                      Through advances in artificial intelligence and computer
+                      vision, we are making it possible to detect deepfakes in
+                      an explainable manner. Our technology is able of detecting
+                      deepfake pictures and videos with real-time speed, not by
+                      only classifying the input as fake or real, but also by
+                      explaining the reasoning behind its decision.<br /><br />
+                      For more information please visit our website or get in
+                      touch with us. <br /><br />
+                      <a href="https://duckduckgoose.ai" target="_blank">duckduckgoose.ai</a><br />
+                      <a href="mailto:info@duckduckgoose.nl">info@duckduckgoose.nl</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- help content tab-->
+              <div class="tab-pane fade" id="help-tab" role="tabpanel" aria-labelledby="help-nav">
+                <div>
+                  <!-- List with help items-->
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      <img src="/images/help-img/fake.svg" id="icon-help-deepfake" alt="deepfake" width="35px"
+                        height="35px" />
+                      <p id="icon-text">
+                        Some elements of deepfakes were detected in this
+                        picture.
+                      </p>
+                    </li>
+                    <li class="list-group-item">
+                      <img src="/images/help-img/maybe-deepfake.svg" id="icon-help-maybe-deepfake"
+                        alt="misschien deepfake" width="35px" height="35px" />
+                      <p id="icon-text">
+                        Some elements of deepfakes might be in this picture.
+                      </p>
+                    </li>
+                    <li class="list-group-item">
+                      <img src="/images/help-img/geen-deepfake.svg" id="icon-help-geen-deepfake" alt="geen deepfake"
+                        width="35px" height="35px" />
+                      <p id="icon-text">
+                        There are no elements of deepfakes detected in this
+                        picture.
+                      </p>
+                    </li>
+                    <li class="list-group-item">
+                      <img src="/images/help-img/no-face-found.svg" id="icon-help-no-face" alt="no face found"
+                        width="35px" height="35px" />
+                      <p id="icon-text">No face was detected in this picture.</p>
+                    </li>
+                    <li class="list-group-item">
+                      <img src="/images/help-img/face-2-sm.svg" id="icon-help-face-2-small" alt="face too small"
+                        width="35px" height="35px" />
+                      <p id="icon-text">
+                        Detected faces are too small to be scanned for possible
+                        deepfakes.
+                      </p>
+                    </li>
+                    <li class="list-group-item">
+                      <img src="/images/help-img/spinner.svg" id="icon-help-spinner" alt="loading" width="35px"
+                        height="35px" />
+                      <p id="icon-text">
+                        Deepfake detection is currently scanning this picture.
+                      </p>
+                    </li>
+                    <li class="list-group-item">
+                      <img src="/images/help-img/overig.svg" id="icon-help-other" alt="overig" width="35px"
+                        height="35px" />
+                      <p id="icon-text">Other errors were found.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- faq tab -->
+              <div class="tab-pane fade" id="faq" role="tabpanel" aria-labelledby="faq-tab">
+                <!-- placeholder for faq -->
+                <ul class="list-group list-group-flush">
+                  <!--List with FAQs-->
+                  <li class="list-group-item">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-text" id="question"><b>On what websites does DeepfakeProof work?</b></p>
+                        <p class="card-text" id="answer">DeepfakeProof works on all websites, except image search pages
+                          of
+                          search engines.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <br>
+                  <li class="list-group-item">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-text" id="question"><b>Where can I find more information on the privacy policy of
+                            the plugin?</b></p>
+                        <p class="card-text" id="answer">Check our privacy policy <a
+                            href="https://www.duckduckgoose.ai/privacy-policy-deepfakeproof" target="_blank">here</a>.
+                          The
+                          workflow of the inner workings of DeepfakeProof can be found <a
+                            href="https://uploads-ssl.webflow.com/6138b92fa61fab29531ddd89/61a64b038cfbf54691d7ccfb_DeepfakerProof%20(2).png"
+                            target="_blank">here</a>.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <br>
+                  <li class="list-group-item">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-text" id="question"><b>What information do you store?</b></p>
+                        <p class="card-text" id="answer">
+                          We save the following information:
+                        <ul>
+                          <li id="answer">Hash of all the images you encountered while the plugin was on, on which a
+                            deepfake check was performed.</li>
+                          <li id="answer">URL of all the images you encountered while the plugin was on, on which a
+                            deepfake check was performed.</li>
+                        </ul>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-text" id="question"><b>Can I verify the code to check nothing more is saved?</b>
+                        </p>
+                        <p class="card-text" id="answer">Not at the moment, but we plan on sharing our code soon.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <br>
+                  <li class="list-group-item">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-text" id="question"><b>Where can I learn more about deepfake detection?</b></p>
+                        <p class="card-text" id="answer">Visit our website at <a href="https://www.duckduckgoose.ai/"
+                            target="_blank">duckduckgoose.ai</a>.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <br>
+                  <li class="list-group-item">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-text" id="question"><b>How can I reach you and provide feedback?</b></p>
+                        <p class="card-text" id="answer">Please send an e-mail to <a
+                            href="mailto:info@duckduckgoose.nl">info@duckduckgoose.nl</a>.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <br>
+                  <li class="list-group-item">
+                    <div class="card">
+                      <div class="card-body">
+                        <p class="card-text" id="question"><b>Can't find what you need?</b></p>
+                        <p class="card-text" id="answer">Contact us at: <a
+                            href="mailto:info@duckduckgoose.nl">info@duckduckgoose.nl</a>.</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- Settings Tab -->
+              <div class="tab-pane fade show" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                <div id="button-div">
+                  <button class="btn btn-primary" id="signOutButton">Sign out</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- sign in tab -->
+  <div class="container" id="loginFail">
+    <div class="container" id="overall">
+      <svg id="deepfakeproof-header-logo" viewBox="0 0 3000 1000">
+        <path fill="#00b3be"
+          d="M 673.99334,293.15678 C 673.0102,276.51963 662.19627,262.65528 647.94149,258.77337 498.51202,219.9533 422.32258,161.16876 388.40604,127.33978 c -12.78012,-12.75516 -32.44195,-12.75516 -45.22207,0 -33.91653,33.8289 -110.59742,92.61352 -259.53545,131.43359 -14.25478,3.88199 -25.0688,17.74634 -26.05185,34.38341 -7.80163,85.18576 23.26904,437.19947 244.15266,551.44108 23.5053,7.79187 33.23257,8.04742 65.71041,14.47574 37.12046,-6.37789 42.8746,-6.58594 59.75097,-11.83598 C 657.55156,738.28669 680.87513,392.97977 673.99342,293.15687" />
+        <path fill="#001b4d"
+          d="m 673.99342,293.15687 c -0.98314,-16.63715 -0.35116,-26.07181 -26.05185,-34.38341 -12.85035,-4.1558 -77.35802,-25.88454 -141.64531,-51.20541 -62.45091,-24.59757 -115.95794,-91.66836 -140.34954,-90.62969 -90.86427,182.50009 -39.03344,352.4736 -19.97261,434.10427 37.3173,164.72342 -60.62331,252.66644 41.87281,302.17943 0,0 30.266,4.50711 75.5524,-23.62283 68.02895,-49.24656 111.68645,-112.33328 145.70696,-174.90685 48.56723,-107.10693 71.35654,-247.86628 64.88723,-361.53543 z" />
+        <path fill="#ffffff"
+          d="m 229.92459,453.26428 c -43.64641,0 -81,26.42818 -81,3.5 0,-22.92818 35.35359,-41.5 79,-41.5 43.64641,0 79,18.57182 79,41.5 0,22.92818 -33.35359,-3.5 -77,-3.5 z" />
+        <ellipse fill="#ffffff" rx="52.564098" ry="34.871799" cx="497.1864" cy="455.36316" />
+        <path fill="#ffffff"
+          d="m 340.98112,768.38817 -25.28023,-6.79201 -22.81051,-9.48945 c -20.69383,-8.60888 -56.78765,-36.68817 -69.21563,-52.64111 -13.79832,-17.71195 -33.83074,-42.5855 -41.86633,-75.91047 -8.03558,-33.32497 30.52567,22.62003 70.0326,44.74072 49.50272,29.92794 64.23925,33.13748 96.46984,35.39358 1.02752,25.26609 -6.36429,26.77181 -7.32974,64.69874 z" />
+
+        <g transform="matrix(2.297017,0,0,2.3789424,679.4345,-1495.1725)">
+          <text class="header-text light">
+            <tspan x="4.0746918" y="915.88257">Deepfake</tspan>
+          </text>
+          <text class="header-text dark">
+            <tspan x="608.411596" y="915.88257">Proof</tspan>
+          </text>
+        </g>
+      </svg>
+      <form id="form">
+        <div class="form-group">
+          <label for="inputEmail">Email address</label>
+          <input type="email" class="form-control" id="inputEmail" name="email" aria-describedby="emailHelp"
+            placeholder="Enter email">
+          <small id="smollText" class="form-text">Please enter your e-mail and password to sign
+            in.</small>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword">Password</label>
+          <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password">
+        </div>
+        <div id="link">
+          <label id="forgotPasswordLabel">
+            <a id="forgotPasswordLink" href="https://deepfakeproof.duckduckgoose.ai/authentication/forgot-password"
+              target="_blank">
+              Forgot password
+            </a>
+          </label>
+        </div>
+        <button type="submit" id="signInButton">Sign in</button>
+      </form>
+      <div>
+        <label id="signupLabel"> No account yet?
+          <a href="https://deepfakeproof.duckduckgoose.ai/authentication/signup" target="_blank">
+            Sign up here
+          </a>
+        </label>
+      </div>
+    </div>
+  </div>
+  <script src="js/popup.js"></script>
+</body>
+
+</html>
